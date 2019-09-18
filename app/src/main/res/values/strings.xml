@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Calculator</string>
+    <string name="CE">CE</string>
+    <string name="tvMulti">*</string>
+    <string name="tvOpen">(</string>
+    <string name="tvFour">4</string>
+    <string name="tvClose">)</string>
 </resources>

@@ -1,227 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="8dp"
-    tools:context=".MainActivity">
+    android:background="@android:color/black"
+    android:orientation="vertical">
 
     <TextView
+        android:id="@+id/tvExpression"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:textSize="48sp"
-        android:background="#efefef"
-        android:id="@+id/txtInput"
-        android:gravity="right|center_vertical"
-        android:maxLength="12"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginRight="8dp"/>
+        android:layout_height="80sp"
+        android:ellipsize="start"
+        android:gravity="end"
+        android:singleLine="true"
+        android:textColor="@color/numberButton"
+        android:textSize="40sp" />
 
-    <TableLayout
+    <TextView
+        android:id="@+id/tvResult"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        app:layout_goneMarginTop="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtInput"
-        android:gravity="fill">
+        android:layout_height="100sp"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:singleLine="true"
+        android:textColor="@color/numberButton"
+        android:textSize="30sp" />
 
-        <TableRow
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:gravity="center">
+            android:orientation="horizontal">
 
-            <Button
-                android:text="7"
-                android:background="@drawable/button"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:onClick="onDigit"
-                android:id="@+id/btnSeven"/>
+            <TextView
+                android:id="@+id/tvClear"
+                style="@style/ActionButtonStyle"
+                android:text="@string/CE" />
 
-            <Button
-                android:text="8"
-                android:background="@drawable/button"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:onClick="onDigit"
-                android:id="@+id/btnEight"/>
+            <TextView
+                android:id="@+id/tvOpen"
+                style="@style/ActionButtonStyle"
+                android:text="@string/tvOpen" />
 
-            <Button
-                android:text="9"
-                android:background="@drawable/button"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:onClick="onDigit"
-                android:id="@+id/btnNine"/>
+            <TextView
+                android:id="@+id/tvClose"
+                style="@style/ActionButtonStyle"
+                android:text="@string/tvClose" />
 
-            <Button
-                android:text="/"
-                android:background="@drawable/button"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:onClick="onOperator"
-                android:id="@+id/btnDivide"/>
-        </TableRow>
+            <TextView
+                android:id="@+id/tvDivide"
+                style="@style/ActionButtonStyle"
+                android:text="/" />
 
-        <TableRow
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:gravity="center">
+            android:orientation="horizontal">
 
-            <Button
-                android:text="4"
-                android:background="@drawable/button"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:onClick="onDigit"
-                android:id="@+id/btnFour"/>
+            <TextView
+                android:id="@+id/tvSeven"
+                style="@style/NumberButtonStyle"
+                android:text="7" />
 
-            <Button
-                android:text="5"
-                android:background="@drawable/button"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:onClick="onDigit"
-                android:id="@+id/btnFive"/>
+            <TextView
+                android:id="@+id/tvEight"
+                style="@style/NumberButtonStyle"
+                android:text="8" />
 
-            <Button
-                android:text="6"
-                android:background="@drawable/button"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:onClick="onDigit"
-                android:id="@+id/btnSix"/>
+            <TextView
+                android:id="@+id/tvNine"
+                style="@style/NumberButtonStyle"
+                android:text="9" />
 
-            <Button
-                android:text="*"
-                android:background="@drawable/button"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:onClick="onOperator"
-                android:id="@+id/btnMultiply"/>
-        </TableRow>
+            <TextView
+                android:id="@+id/tvMul"
+                style="@style/ActionButtonStyle"
+                android:text="@string/tvMulti" />
+        </LinearLayout>
 
-        <TableRow
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:gravity="center">
+            android:orientation="horizontal">
 
-            <Button
-                android:text="1"
-                android:background="@drawable/button"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:onClick="onDigit"
-                android:id="@+id/btnOne"/>
 
-            <Button
-                android:text="2"
-                android:background="@drawable/button"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:onClick="onDigit"
-                android:id="@+id/btnTwo"/>
+            <TextView
+                android:id="@+id/tvFour"
+                style="@style/NumberButtonStyle"
+                android:text="@string/tvFour" />
 
-            <Button
-                android:text="3"
-                android:background="@drawable/button"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:onClick="onDigit"
-                android:id="@+id/btnThree"/>
+            <TextView
+                android:id="@+id/tvFive"
+                style="@style/NumberButtonStyle"
+                android:text="5" />
 
-            <Button
-                android:text="-"
-                android:background="@drawable/button"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:onClick="onOperator"
-                android:id="@+id/btnSubtract"/>
-        </TableRow>
+            <TextView
+                android:id="@+id/tvSix"
+                style="@style/NumberButtonStyle"
+                android:text="6" />
 
-        <TableRow
+            <TextView
+                android:id="@+id/tvMinus"
+                style="@style/ActionButtonStyle"
+                android:text="-" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:gravity="center">
+            android:orientation="horizontal">
 
-            <Button
-                android:text="."
-                android:background="@drawable/button"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:onClick="onDecimalPoint"
-                android:id="@+id/btnDecimal"/>
 
-            <Button
-                android:text="0"
-                android:background="@drawable/button"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:onClick="onDigit"
-                android:id="@+id/btnZero"/>
+            <TextView
+                android:id="@+id/tvOne"
+                style="@style/NumberButtonStyle"
+                android:text="1" />
 
-            <Button
-                android:text="CLR"
-                android:background="@drawable/button"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:onClick="onClear"
-                android:id="@+id/btnClear"/>
+            <TextView
+                android:id="@+id/tvTwo"
+                style="@style/NumberButtonStyle"
+                android:text="2" />
 
-            <Button
-                android:text="+"
-                android:background="@drawable/button"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:onClick="onOperator"
-                android:id="@+id/btnAdd"/>
-        </TableRow>
+            <TextView
+                android:id="@+id/tvThree"
+                style="@style/NumberButtonStyle"
+                android:text="3" />
 
-        <TableRow
+            <TextView
+                android:id="@+id/tvPlus"
+                style="@style/ActionButtonStyle"
+                android:text="+" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
-            <Button
-                android:text="="
-                android:background="@drawable/button"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:onClick="onEqual"
-                android:id="@+id/btnEqual"/>
-        </TableRow>
-    </TableLayout>
-</android.support.constraint.ConstraintLayout>
+            <TextView
+                android:id="@+id/tvDot"
+                style="@style/NumberButtonStyle"
+                android:text="." />
+
+            <TextView
+                android:id="@+id/tvZero"
+                style="@style/NumberButtonStyle"
+                android:text="0" />
+
+            <ImageView
+                android:id="@+id/tvBack"
+                style="@style/NumberButtonStyle"
+                android:scaleType="center"
+                android:src="@drawable/backspace" />
+
+            <TextView
+                android:id="@+id/tvEquals"
+                style="@style/ActionButtonStyle"
+                android:text="=" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

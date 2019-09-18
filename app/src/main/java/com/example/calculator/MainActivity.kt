@@ -3,6 +3,7 @@ package com.example.calculator
 import androidx.appcompat.app.AppCompatActivity
 import net.objecthunter.exp4j.ExpressionBuilder
 import android.os.Bundle
+import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -58,7 +59,7 @@ class MainActivity : AppCompatActivity() {
                     tvResult.text = result.toString()
 
             }catch (e:Exception){
-//                Log.d( "Exception"," message : " + e.message )
+                Log.d( "Exception"," message : " + e.message )
             }
         }
 

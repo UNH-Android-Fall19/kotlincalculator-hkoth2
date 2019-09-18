@@ -5,4 +5,19 @@
     <string name="tvOpen">(</string>
     <string name="tvFour">4</string>
     <string name="tvClose">)</string>
+    <string name="tvDivide">/</string>
+    <string name="tvSeven">7</string>
+    <string name="tvEight">8</string>
+    <string name="tvSix">6</string>
+    <string name="tvFive">5</string>
+    <string name="tvMinus">-</string>
+    <string name="tvNine">9</string>
+    <string name="tvOne">1</string>
+    <string name="tvTwo">2</string>
+    <string name="tvThree">3</string>
+    <string name="tvPlus">+</string>
+    <string name="tvDot">.</string>
+    <string name="tvZero">0</string>
+    <string name="tvEqual">=</string>
+    <string name="backspaceimg">backspaceimg</string>
 </resources>
